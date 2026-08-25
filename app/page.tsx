@@ -1,3 +1,4 @@
+import { Faq } from "@/components/sections/Faq";
 import Hero from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ValueProps } from "@/components/sections/ValueProps";
@@ -8,6 +9,7 @@ export default function Home() {
             <Hero />
             <ValueProps />
             <HowItWorks />
+            <Faq />
         </main>
     );
 }
