@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Badge } from "../ui/badge";
-import { Button, buttonVariants } from "../ui/button";
 import Link from "next/link";
+import { Badge } from "../ui/badge";
+import { buttonVariants } from "../ui/button";
 
 export default function Hero() {
 	return (

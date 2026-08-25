@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 const NAV_LINKS = ["Marketplace", "Companies", "Sellers", "Pricing"];
 
@@ -37,16 +38,17 @@ export function Header() {
 					>
 						Log in
 					</Link>
-					<button className="bg-brand hover:bg-brand/90 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all">
+
+					<Button variant="brand" className="py-5">
 						Get Started
-					</button>
-					<button
+					</Button>
+					<Button
 						className="md:hidden text-ink text-xl"
 						aria-label="Toggle menu"
 						onClick={() => setMenuOpen((open) => !open)}
 					>
 						{menuOpen ? <X /> : <Menu />}
-					</button>
+					</Button>
 				</div>
 			</nav>
 
