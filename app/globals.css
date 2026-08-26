@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-sans);
@@ -46,11 +46,21 @@
 	--radius-2xl: calc(var(--radius) * 1.8);
 	--radius-3xl: calc(var(--radius) * 2.2);
 	--radius-4xl: calc(var(--radius) * 2.6);
+	--color-brand: #0ea5e9;
+	--color-ink: #0f172a;
+	--color-mute: #475569;
+	--color-faint: #94a3b8;
+	--color-line: #e2e8f0;
+	--color-page: #ffffff;
+	--color-surface: #f8fafc;
+	--color-elevated: #ffffff;
+
+	--font-sans: var(--font-inter), sans-serif;
+
+	--max-width-site: 1280px;
 }
 
 :root {
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.145 0 0);
 	--popover: oklch(1 0 0);
@@ -81,6 +91,8 @@
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
+	--background: oklch(1 0 0);
+	--foreground: oklch(0.145 0 0);
 }
 
 .dark {
