@@ -2,6 +2,16 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "../../ui/dialog";
+import { Button } from "../../ui/button";
+import Link from "next/link";
 
 export default function LoginForm() {
 	const [email, setEmail] = useState("");
@@ -159,15 +169,47 @@ export default function LoginForm() {
 						</form>
 
 						{/* Register */}
-						<p className="mt-8 text-center text-sm text-gray-600">
-							Don't have an account?{" "}
-							<a
-								href="/register"
-								className="font-semibold text-blue-600 hover:text-blue-700"
-							>
-								Create account
-							</a>
-						</p>
+						<Dialog>
+							<DialogTrigger>
+								<div className="flex items-center gap-2 mt-2">
+									<p>Don't have an account?</p>
+									<p className=" cursor-pointer text-blue-700 hover:underline hover:text-blue-800">
+										Create account
+									</p>
+								</div>
+							</DialogTrigger>
+
+							<DialogContent>
+								<DialogHeader>
+									<DialogTitle>Create an Account</DialogTitle>
+									<DialogDescription>
+										Choose your account type.
+									</DialogDescription>
+								</DialogHeader>
+
+								<div className="space-y-3">
+									<Link
+										href="/register/company"
+										className="block rounded-xl border p-4 hover:bg-blue-50"
+									>
+										🏢 <strong>Company Registration</strong>
+										<p className="text-sm text-gray-500">
+											Register as a company.
+										</p>
+									</Link>
+
+									<Link
+										href="/register/sales-representative"
+										className="block rounded-xl border p-4 hover:bg-blue-50"
+									>
+										👨‍💼 <strong>Sales Representative Registration</strong>
+										<p className="text-sm text-gray-500">
+											Register as a sales representative.
+										</p>
+									</Link>
+								</div>
+							</DialogContent>
+						</Dialog>
 					</div>
 				</div>
 			</div>

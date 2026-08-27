@@ -26,10 +26,10 @@ export default function Hero() {
 					<Link
 						href="#"
 						className={buttonVariants({
-							variant: "brand",
+							variant: "default",
 							size: "lg",
 							className:
-								"flex-1 h-auto px-8 py-6 text-xl rounded-xl hover:-translate-y-1 transition-all",
+								"flex-1 h-auto px-8 py-6 text-xl rounded-xl hover:-translate-y-1 transition-all bg-brand text-white hover:bg-brand/90 border-brand",
 						})}
 					>
 						I&rsquo;m a company
@@ -37,7 +37,7 @@ export default function Hero() {
 					<Link
 						href="#"
 						className={buttonVariants({
-							variant: "dark",
+							variant: "secondary",
 							size: "lg",
 							className:
 								"flex-1 h-auto px-8 py-6 text-xl rounded-xl hover:-translate-y-1 transition-all",

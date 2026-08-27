@@ -5,11 +5,13 @@ interface LayoutProps {
 	children: React.ReactNode;
 }
 
-export default function LoginLayout({ children }: LayoutProps) {
+export default function RegisterLayout({ children }: LayoutProps) {
 	return (
-		<div className="min-h-screen">
+		<div className="flex min-h-screen flex-col">
 			<Header />
-			{children}
+
+			<main className="flex-1">{children}</main>
+
 			<Footer />
 		</div>
 	);
