@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/a11y/useButtonType: <explanation> */
+/** biome-ignore-all lint/a11y/useButtonType: DialogTrigger supplies the interactive button wrapper */
 
 import Link from "next/link";
 
@@ -16,9 +16,15 @@ const RegisterPopu = () => {
 		<div>
 			<Dialog>
 				<DialogTrigger>
-					<p className="rounded-full border border-blue-300 px-5 py-2 text-sm font-semibold text-blue-600 transition-all duration-300 hover:bg-blue-300 hover:text-white hover:shadow-lg hover:shadow-blue-200 active:scale-95">
+					{/* <p className="rounded-full border border-blue-300 px-5 py-2 text-sm font-semibold text-blue-600 transition-all duration-300 hover:bg-blue-300 hover:text-white hover:shadow-lg hover:shadow-blue-200 active:scale-95">
+            Register
+          </p> */}
+					<button
+						type="button"
+						className="rounded-full border border-blue-300 px-5 py-2 text-sm font-semibold text-blue-600 transition-all duration-300 hover:bg-blue-300 hover:text-white hover:shadow-lg hover:shadow-blue-200 active:scale-95"
+					>
 						Register
-					</p>
+					</button>
 				</DialogTrigger>
 
 				<DialogContent>

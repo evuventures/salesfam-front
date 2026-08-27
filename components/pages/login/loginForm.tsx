@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import {
 	Dialog,
@@ -10,8 +11,6 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "../../ui/dialog";
-import { Button } from "../../ui/button";
-import Link from "next/link";
 
 export default function LoginForm() {
 	const [email, setEmail] = useState("");

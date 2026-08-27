@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "../ui/button";
 import RegisterPopu from "../commoneSections/RegisterPopu";
+import { Button } from "../ui/button";
 
 const NAV_LINKS = [
 	{ label: "Marketplace", href: "/marketplace" },
