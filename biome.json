@@ -7,7 +7,13 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!**/package-lock.json", "!public", "!next-env.d.ts"]
+		"includes": [
+			"**",
+			"!**/package-lock.json",
+			"!public",
+			"!next-env.d.ts",
+			"!lib/api/schema.d.ts"
+		]
 	},
 	"css": {
 		"parser": {
