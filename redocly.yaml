@@ -1,0 +1,22 @@
+# Redocly CLI configuration — validates openapi/openapi.yaml.
+# Run it with: npm run api:lint
+#
+# The "recommended" ruleset checks things like: every operation having a unique
+# operationId and a summary, declaring its security, no components defined but
+# unused, every response documented, and all $ref resolving.
+
+extends:
+  - recommended
+
+apis:
+  salesfam:
+    root: openapi/openapi.yaml
+    # openapi-typescript reads this same config, so the contract path and the
+    # generated types path are declared in a single place, right here.
+    x-openapi-ts:
+      output: lib/api/schema.d.ts
+
+rules:
+  # We allow `localhost` in the servers list: it is the URL the team develops
+  # against, and documenting it has value.
+  no-server-example.com: off

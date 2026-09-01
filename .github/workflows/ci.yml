@@ -35,8 +35,17 @@ jobs:
       - name: Lint & format check
         run: npm run lint:ci
 
-      - name: Type check
-        run: npx tsc --noEmit
-      
+      # Validates the OpenAPI contract and checks that lib/api/schema.d.ts is
+      # regenerated. If someone touches openapi.yaml without running
+      # `npm run api:types`, the git diff fails here.
+      - name: API contract
+        run: npm run api:check
+
+      # Build runs before the type check: Next generates the global types
+      # (LayoutProps, PageProps...) used by app/layout.tsx into .next/types.
+      # Without that step first, `tsc --noEmit` fails on a clean clone.
       - name: Build
         run: npm run build
+
+      - name: Type check
+        run: npx tsc --noEmit
